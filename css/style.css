@@ -1,64 +1,160 @@
 :root {
-    --green: rgba(61,122,107,1);
-  }
-main{
-    display:flex;
+    --green: rgba(61, 122, 107, 1);
+}
+
+
+
+body {
+    background-color: #414141;
+}
+
+h1 {
+    text-align: center;
+}
+main {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 5%;
 }
+main > h2, main > #filter {
+    text-align: center;
+    width: 100%;
+}
 
-article{
+article {
     width: 350px;
     border-radius: 20px;
-    border: 10px solid grey;  /* #3d7a6bb3 */
+    border: 10px solid grey; /* #3d7a6bb3 */
     background-color: grey;
     overflow: hidden;
     margin: 10px;
-    -webkit-box-shadow: -1px 2px 13px 0px rgba(0,0,0,0.74); 
-    box-shadow: -1px 2px 13px 0px rgba(0,0,0,0.74); 
-    
+    -webkit-box-shadow: -1px 2px 13px 0px rgba(0, 0, 0, 0.74);
+    box-shadow: -1px 2px 13px 0px rgba(0, 0, 0, 0.74);
 }
 
-picture{
-    display: block; 
-    background-color: rgba(0,0,0,0.25);   
+picture {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-
-article img{
+article img {
     width: 80%;
     margin: auto;
     display: block;
 }
 
-figcaption{
-    background-color: rgba(255,255,255,0.5); /* #3d7a6b80 */
+figcaption {
+    background-color: rgba(255, 255, 255, 0.5); /* #3d7a6b80 */
     position: relative;
 }
 
-ol{
+ol {
     list-style: none;
     margin: 0;
-    padding: 15px
+    padding: 15px;
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-figure{
+figure {
     display: flex;
     flex-direction: column;
 }
 
-.types{
+.types {
     background-color: #000;
     color: #fff;
-    padding : 5px 10px;
+    padding: 5px 10px;
     position: absolute;
-    top : -10px;
-    left : 10px;
+    top: -10px;
+    left: 10px;
     border-radius: 5px;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Réinitilaisation de la liste déroulante*/
+select {
+    appearance: none;
+    outline: 0;
+    border: 0 !important;
+    background: #f9f9f9;
+    background-image: none;
+    box-shadow: none;
+    font-size: 1.2em;
+}
+
+/* Mise en forme de la div .select*/
+.select {
+    position: relative;
+    width: 350px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+/* Mise en forme de la balise select*/
+select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-left: 15px;
+    color: #555555;
+    cursor: pointer;
+}
+
+/* Mise en place de la flèche */
+.select::after {
+    content: '\276F';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    padding: 0 15px;
+    background: white;
+    pointer-events: none;
+    transform: rotate(90deg);
+    font-size: 1.5em;
+    background: #f9f9f9;
+}
+
+.select:hover::after {
+    color: #fa6141;
+}
+
+/* Filtres types */
+#types {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5%;
+    width: 800px;
+}
+
+#types > div {
+    width: 60px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 170px;
+    height: 60px;
+    margin: 5px;
+}
+#types > div:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#types > div img {
+    width: 100%;
 }
