@@ -24,9 +24,9 @@ main > h2, main > #filter {
 }
 
 article {
-    width: 350px;
+    width: 350px; /* Réduire la largeur des cartes */
     border-radius: 20px;
-    border: 10px solid grey; /* #3d7a6bb3 */
+    border: 10px solid grey;
     background-color: grey;
     overflow: hidden;
     margin: 10px;
@@ -40,7 +40,7 @@ picture {
 }
 
 article img {
-    width: 80%;
+    width: 100%; /* Ajuster la largeur de l'image pour qu'elle s'adapte à la carte */
     margin: auto;
     display: block;
 }
@@ -158,3 +158,30 @@ select {
 #types > div img {
     width: 100%;
 }
+
+#type-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+#type-buttons button {
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 100px; /* Increase the width */
+    height: 100px; /* Increase the height */
+}
+
+#type-buttons button:hover {
+    transform: scale(1.3);
+}
+
+#type-buttons button img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+

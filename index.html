@@ -14,7 +14,7 @@
   <h2>Choose pokémon Generation :</h2>
   <section id="filter">
     <div class="select">
-      <select>
+      <select id="generation-select">
         <option value="1">Generation 1</option>
         <option value="2">Generation 2</option>
         <option value="3">Generation 3</option>
@@ -25,6 +25,16 @@
         <option value="8">Generation 8</option>
       </select>
     </div>
+    <div class="select">
+      <select id="sort-select">
+        <option value="name">Name</option>
+        <option value="HP">Points de vie</option>
+        <option value="attack">Attaque</option>
+        <option value="type">Type</option>
+        <option value="id">ID</option>
+      </select>
+    </div>
+    <button id="sort-order-button">▲</button>
   </section>
 
 
