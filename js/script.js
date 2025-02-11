@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    async function fetchAndDisplayPokemon(generation, type = null, sortCriteria = "name", sortOrder = "asc") {
+    async function fetchAndDisplayPokemon(generation, type = null, sortCriteria = "ID", sortOrder = "asc") {
         const data = await fetch(`https://pokebuildapi.fr/api/v1/pokemon/generation/${generation}`);
         const json = await data.json();
         console.log(json);
